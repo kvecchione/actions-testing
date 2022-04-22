@@ -1,4 +1,4 @@
-name: Build Image
+name: Deploy
 
 on:
   workflow_dispatch:
@@ -17,5 +17,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Deploying Image for ${{ github.event.inputs.environment }}, version: ${{ github.event.inputs.version }}'
-        run: 'echo "Deploying Image for ${{ github.event.inputs.environment }} / ${{ github.event.inputs.version }}'
+      - name: 'Deploying ${{ github.event.inputs.environment }}, version: ${{ github.event.inputs.version }}'
+        run: 'echo "Deploying ${{ github.event.inputs.environment }} / ${{ github.event.inputs.version }}'
