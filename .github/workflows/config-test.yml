@@ -1,14 +1,14 @@
-name: Build Config
+name: Test Config
 
 on:
-  push:
+  pull_request:
     branches: 
     - 'release/**'
-
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build Config
-        run: echo "Building Config"
+      - name: Test Config
+        run: echo "Testing Config"

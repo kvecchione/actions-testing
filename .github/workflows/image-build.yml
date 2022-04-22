@@ -1,0 +1,17 @@
+name: Build Image
+
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: 'Release'
+        required: true
+      environment:
+        description: 'Environment'
+        required: true  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Image for ${{ github.event.inputs.environment }}
+        run: echo "Building Image for ${{ github.event.inputs.environment }}"
