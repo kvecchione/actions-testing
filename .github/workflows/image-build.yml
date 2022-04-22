@@ -6,9 +6,14 @@ on:
       release:
         description: 'Release'
         required: true
+      version:
+        description: 'Config Version'
+        required: true
+        default: latest
       environment:
         description: 'Environment'
         required: true  
+      
 jobs:
   build:
     runs-on: ubuntu-latest

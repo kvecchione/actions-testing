@@ -6,11 +6,12 @@ on:
       release:
         description: 'Release'
         required: true
-      environment:
-        description: 'Environment'
-        required: true
       version:
         description: 'Version'
+        required: true
+        default: latest
+      environment:
+        description: 'Environment'
         required: true
 jobs:
   build:
