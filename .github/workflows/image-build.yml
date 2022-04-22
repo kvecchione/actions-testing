@@ -12,7 +12,8 @@ on:
         default: latest
       environment:
         description: 'Environment'
-        required: true  
+        required: true 
+        type: choice 
         options:
         - dev
         - test
