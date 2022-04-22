@@ -14,8 +14,8 @@ on:
         description: 'Environment'
         required: true
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: 'Deploying ${{ github.event.inputs.environment }}, version: ${{ github.event.inputs.version }}'
-        run: 'echo "Deploying ${{ github.event.inputs.environment }} / ${{ github.event.inputs.version }}'
+        run: echo "Deploying ${{ github.event.inputs.environment }} / ${{ github.event.inputs.version }}"

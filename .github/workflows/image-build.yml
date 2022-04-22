@@ -15,7 +15,7 @@ on:
         required: true  
       
 jobs:
-  build:
+  image-build:
     runs-on: ubuntu-latest
     steps:
       - name: Build Image for ${{ github.event.inputs.environment }}
