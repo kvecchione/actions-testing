@@ -1,0 +1,28 @@
+name: Deploy dev
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment'
+        type: choice
+        required: true
+        options:
+        - dev
+        - test
+        - prod
+      release:
+        description: 'Release'
+        required: true
+      version:
+        description: 'Version'
+        required: true
+        default: latest
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+    steps:
+      - name: 'Deploying ${{ github.event.inputs.environment }}, version: ${{ github.event.inputs.version }}'
+        run: echo "Deploying ${{ github.event.inputs.environment }} / ${{ github.event.inputs.version }}"
