@@ -11,7 +11,7 @@ on:
         required: true
         default: latest
 jobs:
-  deploy-dev:
+  deploy:
     runs-on: ubuntu-latest
     environment: dev
     steps:
