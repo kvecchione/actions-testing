@@ -1,0 +1,13 @@
+name: Build Config
+
+on:
+  push:
+    branches: [ release/* ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Config
+        run: echo "Building Config"
