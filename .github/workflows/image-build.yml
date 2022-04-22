@@ -13,6 +13,10 @@ on:
       environment:
         description: 'Environment'
         required: true  
+        options:
+        - dev
+        - test
+        - prod 
       
 jobs:
   image-build:
