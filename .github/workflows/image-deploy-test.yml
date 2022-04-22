@@ -1,0 +1,19 @@
+name: Deploy test
+
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: 'Release'
+        required: true
+      version:
+        description: 'Version'
+        required: true
+        default: latest
+jobs:
+  deploy-dev:
+    runs-on: ubuntu-latest
+    environment: test
+    steps:
+      - name: 'Deploying test, version: ${{ github.event.inputs.version }}'
+        run: echo "Deploying test / ${{ github.event.inputs.version }}"
